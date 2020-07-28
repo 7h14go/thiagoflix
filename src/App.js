@@ -13,7 +13,7 @@ function App() {
       <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"}
+        videoDescription={"Inspirados por uma descoberta extraordinária, dois príncipes humanos e uma elfo assassina se unem numa jornada épica na busca de paz para seus reinos em guerra."}
       />
 
       <Carousel
@@ -31,15 +31,7 @@ function App() {
 
       <Carousel
         category={dadosIniciais.categorias[3]}
-      />      
-
-      <Carousel
-        category={dadosIniciais.categorias[4]}
-      />      
-
-      <Carousel
-        category={dadosIniciais.categorias[5]}
-      />      
+      />          
 
       <Footer />
 
