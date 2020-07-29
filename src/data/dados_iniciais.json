@@ -10,7 +10,7 @@
       },
       "videos": [
         {
-          "titulo": "Você vai se supreender com #OPríncipeDragrão",
+          "titulo": "Você vai se surpreender com #OPríncipeDragrão",
           "url": "https://www.youtube.com/watch?v=3ixQ2_ItvEY"
         },
         {
@@ -70,7 +70,23 @@
         {
           "titulo": "O Último Samurai",
           "url": "https://www.youtube.com/watch?v=iqS6yJ8nbB4"
-        }
+        },
+        {
+          "titulo": "Ex Machina",
+          "url": "https://www.youtube.com/watch?v=EoQuVnKhxaM"
+        },
+        {
+          "titulo": "Sem Limites",
+          "url": "https://www.youtube.com/watch?v=JMU_ksS3fq4"
+        },
+        {
+          "titulo": "13º Andar",
+          "url": "https://www.youtube.com/watch?v=Z4SdhHjUVA0"
+        },
+        {
+          "titulo": "Matrix",
+          "url": "https://www.youtube.com/watch?v=2KnZac176Hs"
+        } 
       ]
     },
     {
@@ -100,7 +116,23 @@
         {
           "titulo": "The Boys",
           "url": "https://www.youtube.com/watch?v=06rueu_fh30"
-        }
+        },
+        {
+          "titulo": "A Ordem",
+          "url": "https://www.youtube.com/watch?v=s7ZnrtiqGdw"
+        },
+        {
+          "titulo": "Perdidos no Espaço",
+          "url": "https://www.youtube.com/watch?v=GYn4r6nV0tw"
+        },
+        {
+          "titulo": "Rick and Morty",
+          "url": "https://www.youtube.com/watch?v=hl1U0bxTHbY"
+        },
+        {
+          "titulo": "Dr. House",
+          "url": "https://www.youtube.com/watch?v=dVlQJO4HZj0"
+        }        
       ]
     },
     {
@@ -130,6 +162,26 @@
         {
           "titulo": "My Hero Academia",
           "url": "https://www.youtube.com/watch?v=-77UEct0cZM"
+        },
+        {
+          "titulo": "Black Clover",
+          "url": "https://www.youtube.com/watch?v=ScKdFRBJhyY"
+        },
+        {
+          "titulo": "Naruto Shippuden",
+          "url": "https://www.youtube.com/watch?v=thh7bVCgDHs"
+        },
+        {
+          "titulo": "Sword Art Online",
+          "url": "https://www.youtube.com/watch?v=6ohYYtxfDCg"
+        },
+        {
+          "titulo": "Bleach",
+          "url": "https://www.youtube.com/watch?v=oZ67d9XSjFs"
+        },
+        {
+          "titulo": "One Punch Man",
+          "url": "https://www.youtube.com/watch?v=2JAElThbKrI"
         }
       ]
     }
