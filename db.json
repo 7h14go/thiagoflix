@@ -1,0 +1,28 @@
+{
+  "categorias":[
+    {
+      "id": 1,
+      "nome": "Programação",
+      "descricao": "Videos sobre programação",
+      "cor": "#cvd1ff"
+    },
+    {
+      "id": 2,
+      "nome": "Filmes",
+      "descricao": "Filmes que você deveria assistir",
+      "cor": "#cvd1ff"
+    },
+    {
+      "id": 3,
+      "nome": "Séries",
+      "descricao": "Séries que você deveria assistir",
+      "cor": "#cvd1ff"
+    },
+    {
+      "id": 4,
+      "nome": "Animes",
+      "descricao": "Animes que você deveria ver",
+      "cor": "#cvd1ff"
+    }
+  ]
+}

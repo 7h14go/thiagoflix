@@ -55,6 +55,7 @@
     text-decoration: none;
     display: inline-block;
     transition: opacity .3s;
+    background: var(--background);
   }
   .ButtonLink:hover,
   .ButtonLink:focus {
