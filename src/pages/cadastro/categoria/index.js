@@ -31,7 +31,9 @@ function CadastroCategoria(){
 
   useEffect(()=>{
     console.log('Alo brasil');
-    const URL = 'http://localhost:8080/categorias'
+    const URL = window.location.hostname.includes('localhost')
+    ? 'http://localhost:8080/categorias'
+    :'https://thiagoflix.herokuapp.com/categorias'
 
     fetch(URL).then(async (respostaDoServidor) => { 
       const resposta = await respostaDoServidor.json();
@@ -40,7 +42,7 @@ function CadastroCategoria(){
       ]);
      });
 
-  })
+  },[])
 
   return(
     <PageDefault>
@@ -92,9 +94,9 @@ function CadastroCategoria(){
       )}
 
       <ul>
-        {categorias.map((categoria)=>{
+        {categorias.map((categoria, indice)=>{
           return(
-            <li key={`${categoria}`}>
+            <li key={`${categoria}${indice}`}>
               {categoria.nome}
             </li>
           )
