@@ -1,36 +1,23 @@
-import React, { useState, useEffect } from 'react'
-import{ Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import{ Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormFiled from '../../../components/FormFiled';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
+import categoriaRepository from '../../../repositories/categorias'
 
 function CadastroCategoria(){
 
-  
   const valoresIniciais ={
-    nome:'',
+    titulo:'',
     descricao:'',
-    cor:'',
+    cor:'#000000'
   }
+
+  const {handleChange, valores, clearForm} = useForm(valoresIniciais)
   const [categorias, setCategorias] = useState([]);
-  const [valores, setValores] = useState(valoresIniciais);
 
-  function setValor(chave, valor){    
-    setValores({
-      ...valores,
-      [chave]: valor, //nome: 'valor'
-    })    
-  }
-
-  function handleChange(infosDoEvento){
-    setValor(
-      infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value      
-    );    
-  }
-
-  useEffect(()=>{
-    console.log('Alo brasil');
+  useEffect(()=>{    
     const URL = window.location.hostname.includes('localhost')
     ? 'http://localhost:8080/categorias'
     :'https://thiagoflix.herokuapp.com/categorias'
@@ -46,43 +33,60 @@ function CadastroCategoria(){
 
   return(
     <PageDefault>
-      <h1>Cadastro de Categoria: {valores.nome}</h1>
+      <h1>Cadastro de Categoria: {valores.titulo}</h1>
 
       <form onSubmit={function handleSubmit(infosDoEvento){
         infosDoEvento.preventDefault()
-        console.log('Você tentou enviar um form né?')
-        setCategorias([
-          ...categorias,
-          valores
-        ]);
-        setValores(valoresIniciais)
+        //Descomentar daqui até o alert e retirar o alert 
+        // setCategorias([
+        //   ...categorias,
+        //   valores
+        // ]);
+
+        // categoriaRepository.createCategorias({
+        //   titulo: valores.titulo,
+        //   descricao: valores.descricao,
+        //   cor: valores.cor
+        //  })
+        alert("Foi mal, desabilitei o cadastro de categoria :)")
+
+        clearForm()
       }}>
         <FormFiled
-          label="Nome da Categoria"
-          type= "texto"
-          name = "nome"
-          value={valores.nome}
+          label='Nome da Categoria'
+          type= 'texto'
+          name = 'titulo'
+          value={valores.titulo}
           onChange={handleChange}
+          suggestion={
+            []
+          }
         />
 
         <FormFiled
-          label="Descrição"
-          type= "textarea"
-          name = "descricao"
+          label='Descrição'
+          type= 'textarea'
+          name = 'descricao'
           value={valores.descricao}
           onChange={handleChange}
+          suggestion={
+            []
+          }
         />
 
         <FormFiled
-          label="Cor"
+          label='Cor'
           type= 'color'
           name = 'cor'
-          value={valores.nome}
+          value={valores.cor}
           onChange={handleChange}
+          suggestion={
+            []
+          }
         />
 
 
-        <Button className="ButtonLink">
+        <Button className="ButtonLink" type="submit">
           Cadastrar
         </Button>
       </form>
@@ -94,10 +98,10 @@ function CadastroCategoria(){
       )}
 
       <ul>
-        {categorias.map((categoria, indice)=>{
+        {categorias.map((categoria)=>{
           return(
-            <li key={`${categoria}${indice}`}>
-              {categoria.nome}
+            <li key={`${categoria.titulo}`}>
+              {categoria.titulo}
             </li>
           )
         })}

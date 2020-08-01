@@ -72,13 +72,15 @@ const Input = styled.input`
     }
 `;
 
-function FormField({ label, type, name, value, onChange }) {
+function FormField({ label, type, name, value, onChange, suggestion }) {
 
     const fieldId = `id_${name}`;
     const isTypeTextarea = type === 'textarea';
     const tag = isTypeTextarea ? 'textarea' : 'input';
 
     const hasValue = Boolean(value.length);
+    
+    const hasSuggestion = Boolean(suggestion.length);
 
     return (
         <FormFieldWrapper>
@@ -91,10 +93,26 @@ function FormField({ label, type, name, value, onChange }) {
                     name={name}
                     hasValue={hasValue}
                     onChange={onChange}
+                    autoComplete={hasSuggestion ? 'off' : 'on'}
+                    list={ hasSuggestion ? `suggestionFor_${fieldId}` : undefined}                    
                 />
                 <Label.Text>
                     {label}:
                 </Label.Text>
+                {
+                  hasSuggestion && (
+                    <datalist id={`suggestionFor_${fieldId}`}>
+                      {
+                        suggestion.map((suggestion) => (
+                          <option value={suggestion} key={`suggestionFor_${fieldId}_option${suggestion}`}>
+                            {suggestion}
+                          </option>
+                        ))
+                      }
+                    </datalist>
+
+                  )
+                }
             </label>
         </FormFieldWrapper>
     )

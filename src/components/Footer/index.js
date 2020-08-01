@@ -8,10 +8,10 @@ function Footer() {
         <img src="https://github.com/fluidicon.png" alt="Logo Github" width="50em" height="50em" />
       </a>
       <p>
-        Orgulhosamente criado por
+        Desenvolvido por
         {' '}
         <a href="https://github.com/7h14go">
-          Thiago H. Sousa
+          Thiago Sousa
         </a>
       </p>
     </FooterBase>
